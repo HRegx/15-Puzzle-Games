@@ -1,5 +1,5 @@
 # 15-Puzzle-Games
-15 Puzzle Games Frontend ReactJS Backend MySQL NodeJS 
+15 Puzzle Games Written in ReactJS as Frontend  MySQL NodeJS as Backend 
 
 # Getting Started with Create React App
 
