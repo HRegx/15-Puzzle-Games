@@ -1,12 +1,11 @@
 
-const endpoint = 'https://ec2-54-157-167-21.compute-1.amazonaws.com:8080/';
+const endpoint = 'https://';
 export default function DbCommand( { _command } ){
 
 }
 
 export function inject(topScore,getTime,f_sname){
     fetch(endpoint + 'inject', { 
-        // fetch('http://localhost:3001/inject', { 
         headers: { 'Content-Type': 'application/json' },
         method: "POST",
         body: JSON.stringify({
