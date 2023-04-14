@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Medium";   /*Can be any text*/
+    src: local("puzzle"),
+      url("../font/Hacked-KerX.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";   /*Can be any text*/
+    src: local("puzzle"),
+      url("../font/RubikVinyl-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Typew";   /*Can be any text*/
+  src: local("puzzle"),
+    url("../font/STAMPWRITER-KIT.ttf") format("truetype");
+}
+
+.blink {
+  animation: .5s linear infinite condemned_blink_effect;
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;        
+  }
+  75% {
+    visibility: visible;   
+    color: red; 
+  }
+
+  100% {
+    visibility: visible;
+    color: #F4B400;
+  }  
+}
+
+._blue{
+  color: darkblue;
+}
+
+._aqua{
+  color:aqua;
+}
+
+._green{
+  color: green;
+}
+
+._orange{
+  color: orange;
+}
+
+._quote{
+  font-family: Typew;
+  font-size: 6px;
+}
+
+.bradius-size{
+  border-radius: 50%;  
+}
+
+.glassmorphism{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid #fff;
+}
+
+.wihe{
+  width: 300px;
+  height: 500px;
+  margin-top: 60px;
+  padding: 10px;
+  text-align: center;
+  line-height: 1;
+}
+
+._footer{
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+}
+
+._puzzle {
+  font-size: 18px;
+  font-family: "Medium"; 
+  color: red; 
+  cursor: pointer;   
+  border: 0px;
+  padding: 10px;
+  background: none;
+}
+
+._puzzle:hover{
+  color: #0F9D58;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa;
+}
