@@ -2,26 +2,29 @@ import React from "react";
 import { useState } from "react";
 import ShowModal from "./modal"
 import { _bsize, _buttonAbsolute, _button, _b1, _b2} from "./variable.js"; 
+import { soundEffect } from "./sounds";
 
 
 export default function LoadButton(props){
     const [popModal, setPopModal] = useState(false);
     const bstyle = {..._bsize, ..._buttonAbsolute, ..._button};
+
    
     function tF(){
         (popModal === true)? setPopModal(false) : setPopModal(true);
-        // console.log("button.js pausetime");
         props.pauseTime();
     }
 
     function newGame() {
+        soundEffect("nope");
         props.resetTime();
         props.shuffle();
         props.reset(0);                        
     }
 
     function pauseGame(){
-        setPopModal(true)
+        soundEffect("pause");
+        setPopModal(true);
         props.pauseTime();
     }
 
