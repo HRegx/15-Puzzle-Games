@@ -10,6 +10,7 @@ export default function About(props){
                  
                     <img className="bradius-size" src="../about.png" alt="Monkey D. Luffy"/>
                     <h3>Regin Calaguas</h3>
+                    <a href="https://www.linkedin.com/in/regin-calaguas-8b89a426a/">Contact Me</a>
                     <h3>Powered By:</h3>
                     <h3 className="_blue">AWS</h3> 
                     <h3 className="_aqua">React</h3> 
