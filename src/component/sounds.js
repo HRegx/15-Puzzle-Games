@@ -5,40 +5,44 @@ import topEffect from "./effect/top.wav"
 import successEffect from "./effect/success.mp3";
 import openningEffect from "./effect/openning.mp3"
 
-export default function AudioEffect({ effects }){    
-    //Nothing in Here ....
-}
+let audioComponent = [];
+audioComponent[0] =  new Audio(openningEffect);                        
+audioComponent[1] =  new Audio(slideEffect);                        
+audioComponent[2] =  new Audio(topEffect);                        
+audioComponent[3] =  new Audio(successEffect);                        
+audioComponent[4] =  new Audio(pauseEffect);                        
+audioComponent[5] =  new Audio(nopeEffect); 
 
 
 export function soundEffect(effects){
-    
-    let audioEffects = null;
-        console.log(audioEffects);
-        
+
     switch (effects) {
         case 'openning':
-            audioEffects = new Audio(openningEffect);            
+            _play(0);
         break;        
         case 'slide':            
-            audioEffects = new Audio(slideEffect);            
+            _play(1);
         break;
         case 'top':
-            audioEffects = new Audio(topEffect);
+            _play(2);
         break;
         case 'success':
-            audioEffects = new Audio(successEffect);
+            _play(3);
         break;
         case 'pause':
-            audioEffects = new Audio(pauseEffect);
+            _play(4);
         break;
         case 'nope':
-            audioEffects = new Audio(nopeEffect);
+            _play(5);
         break;        
 
         default:
         break;
     }
 
-    audioEffects.currentTime = 0;
-    audioEffects.play();   
+    function _play(x){
+        audioComponent[x].currentTime = 0;
+        audioComponent[x].play();        
+    }
+
 }
