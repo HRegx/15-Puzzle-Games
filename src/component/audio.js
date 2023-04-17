@@ -68,50 +68,6 @@ let buffer = null;
 }
 
 
-//<button onClick={() => playAudio(audioBuffers[0])}>Play Audio 1</button> 
-
-
-// function AudioPlayer() {
-//   const [audioContext, setAudioContext] = useState(null);
-//   const [audioBuffers, setAudioBuffers] = useState([]);
-
-//   useEffect(() => {
-//     // create new AudioContext object
-//     const context = new AudioContext();
-//     setAudioContext(context);
-
-//     // load audio files as buffers
-//     const audioFileNames = [openningEffect, pauseEffect, slideEffect];
-//     Promise.all(audioFileNames.map(fileName => fetch(fileName)
-//       .then(response => response.arrayBuffer())
-//       .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
-//     ))
-//     .then(buffers => setAudioBuffers(buffers))
-//     .catch(error => console.error(error));
-//   }, []);
-
-//   const playAudio = (buffer) => {
-//     if (audioContext && buffer) {
-//       // create audio source node and connect to context
-//       const sourceNode = audioContext.createBufferSource();
-//       sourceNode.buffer = buffer;
-//       sourceNode.connect(audioContext.destination);
-
-//       // start playing audio
-//       sourceNode.start();
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <button onClick={() => playAudio(audioBuffers[0])}>Play Audio 1</button>
-//       <button onClick={() => playAudio(audioBuffers[1])}>Play Audio 2</button>
-//       <button onClick={() => playAudio(audioBuffers[2])}>Play Audio 3</button>
-//     </div>
-//   );
-// }
-
-// export default AudioPlayer;
 
 
 
