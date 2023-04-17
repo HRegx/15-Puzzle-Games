@@ -5,11 +5,9 @@ import successEffect from "./effect/success.mp3";
 import pauseEffect from "./effect/pause.wav";
 import nopeEffect from "./effect/nope.wav";
 
-
-const audioContext = new AudioContext();
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let audioBuffers = [];
 let holdAudio = null;
-
 
 export default function AudioPlayer(){
 
@@ -19,8 +17,8 @@ export default function AudioPlayer(){
                                 .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
                                 )
              )
-             .then((buffers) =>  {audioBuffers = buffers;
-                                  playAudio("openning");
+             .then((buffers) =>  {audioBuffers = buffers;                                                                    
+                                  window.addEventListener("canplaythrough",playAudio("openning"));
                                  }
                   )
              .catch(error => console.error(error));
@@ -58,6 +56,7 @@ let buffer = null;
     holdAudio.stop();
   }
 
+
   if(buffer){          
     const sourceNode = audioContext.createBufferSource();
     sourceNode.buffer = buffer;
@@ -66,9 +65,3 @@ let buffer = null;
     sourceNode.start();    
   }
 }
-
-
-
-
-
-
