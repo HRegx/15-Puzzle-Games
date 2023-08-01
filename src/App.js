@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useState, useRef } from "react";
 
@@ -153,7 +154,7 @@ const style = screenConfig(screenWidth);
 const ref = useRef();     
 const [pGame, setPGame] = useState(false);    
 // const [about, setAbout] = useState(false);
-const [isTop, setIsTop] = useState(100);
+const [isTop, setIsTop] = useState(10);
 const [showTop, setShowTop] = useState(false);
 const [well, setWell] = useState(false);
 const [_score, setScore] = useState(0);
@@ -326,9 +327,7 @@ return (
 
           {pGame && <ShowModal myToggle={pauseGame}/>}
 
-                    {well &&    <WellDone _isTop={isTop} _score={_score} _time={ref.current.getTime()} onClicks={closeWell}/> }
-                    
-
+                    {well &&    <WellDone _isTop={isTop} _score={_score} _time={ref.current.getTime()} onClicks={closeWell}/> }                    
                     {/* {showTop && <TopScore />} */}
 
 
