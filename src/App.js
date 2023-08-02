@@ -17,14 +17,6 @@ import TopScore from './component/topscore';
 import BlinkingText from './component/blink';
 
 
-// const numInfo =[      
-//   [15,270,360], [0,0,90],   [1,90,90],   [2,180,90],  
-//   [3,270,90],   [4,0,180],  [5,90,180],  [6,180,180], 
-//   [7,270,180],  [8,0,270],  [9,90,270],  [10,180,270], 
-//   [11,270,270], [12,0,360], [13,90,360], [14,180,360]                        
-// ];
-
-
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 
