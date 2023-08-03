@@ -7,7 +7,22 @@ import { bright, cbutton, modalLayout } from "./variable.js";
 import "../component/myfont.css"
 import { titleFont } from "./variable";
 
-export default function TopScore(props){    
+export default function TopScore(props){
+  
+    const jsonData = [
+    { id: 1, fname: 'Kirsten',  ftime: '00:00:01', fscore: '1'},
+    { id: 2, fname: 'Vash',  ftime: '00:00:02', fscore: '10'},
+    { id: 3, fname: 'Elon Musk',  ftime: '00:00:03', fscore: '100'},
+    { id: 4, fname: 'KNIVE',  ftime: '00:00:04', fscore: '100'},
+    { id: 5, fname: 'Luffy',  ftime: '00:00:05', fscore: '100'},
+    { id: 6, fname: 'Gol D. Roger',  ftime: '00:00:06', fscore: '100'},
+    { id: 7, fname: 'OneLove',  ftime: '00:00:07', fscore: '100'},
+    { id: 8, fname: 'Canada',  ftime: '00:00:08', fscore: '100'},
+    { id: 9, fname: 'Philippines',  ftime: '00:00:09', fscore: '100'},
+    { id: 10, fname: 'Secret',  ftime: '00:00:10', fscore: '100'},
+  ];
+
+    
     const [scorer, setScorer] = useState([]);
     
     const acenter = {    
