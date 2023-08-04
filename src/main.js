@@ -3,21 +3,26 @@ import React from "react";
 import { useState, useRef } from "react";
 import LoadButton from "./component/button";
 
+// import AudioPlayer from "./component/audio";
+// import { playAudio } from "./component/audio";
+
+import { AudioPlayer } from "./component/sounds";
+import { playAudio } from "./component/sounds";
+
 import ShowTimer from "./component/showtimer";
 import SlideNumber from "./component/slidenumber";
 import TopScore from "./component/topscore";
 import WellDone from "./component/welldone";
-import { soundEffect } from "./component/sounds";
+// import { soundEffect } from "./component/sounds";
 
 
 // import DbCommand from "./component/db";
-
+import Quote from "./component/quote";
 import About from "./component/about";
 import { getHighScore } from "./component/db";
 import { titleFont } from "./component/variable";
 
 import "../src/component/myfont.css";
-
 
 
 
@@ -59,6 +64,9 @@ export default function Main(){
     const [_score, setScore] = useState(0);
     const [_value, setValue] = useState(numInfo);    
     const [_png, setPNG] = useState();
+    const [quote, setQuote] = useState(false);
+    
+
     var new_value = [..._value];
     var thisArray = [];
     var _swap =[];
@@ -140,7 +148,7 @@ export default function Main(){
         }
         if((_clover===true) && (new_value[0][0]===15)){
             // alert("Success...");
-            soundEffect("success");
+            playAudio("success");
             setWell(true);
         }
     }
@@ -151,7 +159,7 @@ export default function Main(){
         canSlide(false);                
         for(let j=0;j<_swap.length;j++){
             if(_swap[j]===i){
-                soundEffect("slide");       
+                playAudio("slide");       
                 swapper(i);
                 isFinish();
                 setScore(_score + 1);                
@@ -163,6 +171,7 @@ export default function Main(){
     }
 
 
+    
     function loadBoard(){
         // console.log("called function loadBoard");
         
@@ -195,12 +204,13 @@ export default function Main(){
     function loadOnce(){
         if(oO===1){
             oO=0;
+            AudioPlayer();            
             setPNG(Math.floor(Math.random() * (9))+".png");    
             shuffleNumber();
             // soundEffect("openning");
 
             const topTen = Promise.resolve(getHighScore());
-            topTen.then(arg=>setIsTop(arg[0].f_score));    
+            topTen.then(arg=>setIsTop(arg[0].f_score));              
             // topTen.then(arg=>console.log(arg));                   
         }
     }
@@ -210,6 +220,7 @@ export default function Main(){
     return(
         <>                  
             {about && <About _showAbout = {x=>setAbout(x)}/>}
+            {quote && <Quote _showQuote = {x=>setQuote(x)}/>}
 
             {well &&    <WellDone 
                             getTime={ref.current.getTime()} 
@@ -251,14 +262,15 @@ export default function Main(){
                     </div>
                 </div> */}
 
-
                 <div className="_footer">
                     <div className="glassmorphism">            
-                        <button onClick={()=>{soundEffect("top"); setShowTop(true)}} className="_puzzle">Top 10 Best Players</button>
+                        <button onClick={()=>{playAudio("top"); setShowTop(true)}} className="_puzzle">Top 10 Best Players</button>
                         <button className="_puzzle" onClick={()=>{setAbout(true)}}>About</button>
                         <button className="_puzzle"><a href="https://15puzzle.s3.amazonaws.com/index.html">How To</a></button>
+                        <button className="_puzzle" onClick={()=>{setQuote(true)}}>Quote</button>                        
                     </div>
                 </div>
+                
 
                 {/* 
                 powered by:
@@ -266,7 +278,7 @@ export default function Main(){
                 React
                 NodeJS
                 MySQL                
-                Author: Regin B. Calaguas                
+                Author: Regin B. Calaguas
                 */}
         </>
     );
