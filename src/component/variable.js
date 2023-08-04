@@ -60,6 +60,7 @@ export const modalLayout = {
     overflow: "auto", /* Enable scroll if needed */            
     backgroundColor: "rgba(0,0,0,0.90)" /* Black w/ opacity */          
 }
+
 export const _box = {
     borderRadius: "5px",
     transform: "translateY(50%)",
@@ -68,6 +69,15 @@ export const _box = {
     padding: "30px",
     boxShadow: "5px 5px 10px #888888",
     height: "350px",        
+}
+
+export const _boxQ = {
+    margin: 20,
+    borderRadius: "5px",
+    background: "white",
+    textAlign: "center",
+    padding: "30px",
+    boxShadow: "5px 5px 10px #888888",   
 }
 
 export const  _textbox = {
