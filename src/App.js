@@ -51,19 +51,11 @@ const screenConfig = (sWidth) => {
                               paddingTop: 20,
                     },        
                     centered:{
-                              // flex: 1,
                               alignItems: 'center',
-                              // justifyContent: 'center',                              
-                              // paddingTop: 20,
                     },                    
                     mainBoard: {
-                              // borderWidth: 2,
-                              // borderColor: 'red',
-                              // backgroundColor: 'green',
-                              // position: "absolute",
                               height: 400,
                               width: mainSQ,
-                              // left: 0,
                               top: 30,
                               padding: 0,
                               margin: 0,
@@ -101,24 +93,22 @@ const screenConfig = (sWidth) => {
                     
                     
                     titleContainer: {
-                              flexDirection: 'row', // Aligns the columns horizontally                              
-                              // justifyContent: 'space-between', // Adds space between the columns                              
+                              flexDirection: 'row',
                     },
                     column: {
-                              flex: 1, // Makes the columns occupy equal width                                                            
+                              flex: 1,
                     },
                     leftText: {
-                              textAlign: 'left', // Aligns the text to the left
-                              // paddingLeft: 0,
+                              textAlign: 'left',
                     },
                     rightText: {
-                              textAlign: 'right', // Aligns the text to the right                              
+                              textAlign: 'right',
                     },
                     bleft: {
-                              alignItems: 'center', // Aligns the text to the left
+                              alignItems: 'center',
                     },
                     bright: {
-                              alignItems: 'center', // Aligns the text to the right
+                              alignItems: 'center', 
                     },  
                     footerContainer:{
                       paddingTop: 20,
