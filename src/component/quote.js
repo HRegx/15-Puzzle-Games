@@ -9,10 +9,9 @@ export default function Quote(props){
   }
   const _quote = {
     position: 'absolute',
-    top: '30%', // Place the text 50% from the top of the container.
-    left: '50%', // Place the text 50% from the left of the container.
-    transform: 'translate(-50%, -50%)', // Center the text using translate.
-    // fontFamily: "Typew",
+    top: '30%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
     fontSize: '34px',
     color: 'black',  
     width: 600,  
