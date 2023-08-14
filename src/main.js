@@ -3,8 +3,7 @@ import React from "react";
 import { useState, useRef } from "react";
 import LoadButton from "./component/button";
 
-// import AudioPlayer from "./component/audio";
-// import { playAudio } from "./component/audio";
+
 
 import { AudioPlayer } from "./component/sounds";
 import { playAudio } from "./component/sounds";
@@ -13,10 +12,10 @@ import ShowTimer from "./component/showtimer";
 import SlideNumber from "./component/slidenumber";
 import TopScore from "./component/topscore";
 import WellDone from "./component/welldone";
-// import { soundEffect } from "./component/sounds";
 
 
-// import DbCommand from "./component/db";
+
+
 import Quote from "./component/quote";
 import About from "./component/about";
 import { getHighScore } from "./component/db";
